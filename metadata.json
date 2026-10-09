@@ -1,0 +1,6 @@
+{
+  "name": "DAVID | TATTOO ARTIST",
+  "description": "Official cinematic portfolio and booking experience for David, independent tattoo artist specializing in blackwork, fine line, and bespoke skin art.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
