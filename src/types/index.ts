@@ -19,6 +19,7 @@ export interface TattooWork {
   instagramPostUrl?: string;
   isVideo?: boolean;
   isAward?: boolean;
+  lqip?: string;
 }
 
 export interface BookingData {

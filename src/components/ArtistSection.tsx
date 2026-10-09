@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram, ArrowUpRight, ShieldCheck, Sparkles, Feather } from 'lucide-react';
 import { ARTIST_INFO } from '../data/tattoos';
+import { ProgressiveImage } from './ProgressiveImage';
 
 interface ArtistSectionProps {
   onOpenBooking: () => void;
@@ -27,10 +28,12 @@ export const ArtistSection: React.FC<ArtistSectionProps> = ({ onOpenBooking }) =
               {/* Outer frame */}
               <div className="relative border border-white/20 p-2 sm:p-3 bg-[#141414] shadow-2xl">
                 <div className="aspect-[4/5] relative overflow-hidden bg-[#090909] group">
-                  <img
+                  <ProgressiveImage
                     src={ARTIST_INFO.artistPortraitUrl}
+                    lqip={ARTIST_INFO.artistPortraitLqip}
                     alt="David Pérez - Tatuador Colombiano"
-                    className="w-full h-full object-cover sm:object-contain group-hover:scale-[1.02] transition-transform duration-700"
+                    className="w-full h-full"
+                    imgClassName="object-cover sm:object-contain group-hover:scale-[1.02] transition-transform duration-700"
                   />
                   
                   {/* Subtle shine on hover */}

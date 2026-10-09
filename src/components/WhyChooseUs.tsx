@@ -83,6 +83,8 @@ export const WhyChooseUs: React.FC<WhyChooseUsProps> = ({ onOpenBooking }) => {
                   <img
                     src={pillar.image}
                     alt={pillar.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-black/60 via-transparent to-transparent pointer-events-none" />
