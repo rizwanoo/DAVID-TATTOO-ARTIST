@@ -4,6 +4,7 @@ import { Maximize2, Instagram, ArrowUpRight, Play } from 'lucide-react';
 import { TATTOO_PORTFOLIO, ARTIST_INFO } from '../data/tattoos';
 import { TattooCategory, TattooWork } from '../types';
 import { LightboxModal } from './LightboxModal';
+import { ProgressiveImage } from './ProgressiveImage';
 
 interface PortfolioProps {
   onOpenBookingWithStyle: (styleName: string) => void;
@@ -98,16 +99,17 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onOpenBookingWithStyle }) 
                 className="group relative flex flex-col bg-[#141414] border border-white/10 overflow-hidden cursor-pointer"
                 onClick={() => setActiveTattooIndex(index)}
               >
-                {/* Image Container with controlled aspect ratio */}
+                {/* Image Container with controlled aspect ratio & Progressive LQIP */}
                 <div className="relative aspect-[3/4] w-full overflow-hidden bg-black/60">
-                  <img
+                  <ProgressiveImage
                     src={work.image}
+                    lqip={work.lqip}
                     alt={work.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="w-full h-full"
+                    imgClassName="grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
                   />
                   {/* Subtle Dark Vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent opacity-80 pointer-events-none" />
 
                   {/* Hover Overlay Button */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">

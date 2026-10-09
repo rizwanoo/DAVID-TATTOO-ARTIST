@@ -39,6 +39,8 @@ export const SignatureArtwork: React.FC<SignatureArtworkProps> = ({ onOpenBookin
               transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
               src="/david_original/tattoo-01.jpg"
               alt="David - Original Blackwork Masterpiece"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover object-center grayscale contrast-125 transition-transform duration-1000 group-hover:scale-105"
             />
             {/* Dark Vignette & Gradient Overlays */}

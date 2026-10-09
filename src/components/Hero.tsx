@@ -28,6 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             muted
             loop
             playsInline
+            preload="auto"
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoError(true)}
             className={`w-full h-full object-cover transition-opacity duration-700 ${
